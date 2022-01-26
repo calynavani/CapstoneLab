@@ -1,0 +1,16 @@
+<form>
+    <label for="name"> Name: </label><br/>
+    <input type="text" id="name" name="name"><br/>
+    <label for="instructions"> Instructions: </label><br/>
+    <input type="text" id="instructions" name="instructions"><br/>
+    <label for="dueDate"> Due Date: </label><br/>
+    <input type="date" id="dueDate" name="dueDate" value="Date"><br/>
+    <!--label for="isCompleted"> Completed: </label><br/>
+    <input type="radio" id="completed" name="completed" value="true">Yes<br/>
+    <input type="radio" id="completed" name="completed" value="false">No<br/>  -->
+    
+    <button (click)="CreateATask()">Add Task</button>
+
+</form>
+
+<a routerLink="home" class="nav-link" >Quit</a>

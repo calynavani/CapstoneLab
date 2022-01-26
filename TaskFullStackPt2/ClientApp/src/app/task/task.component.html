@@ -1,0 +1,29 @@
+<a routerLink="search-task" class="nav-link" >Find My Task</a>
+
+<table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+      <tr>
+        <th>Task #</th>
+        <th>Name</th>
+        <th>Instructions</th>
+        <th>Due Date</th>
+        <th>Completed</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of currentTask">
+        <td>{{ t.id }}</td>
+        <td>{{ t.name }}</td>
+        <td>{{ t.instructions}}</td>
+        <td>{{ t.dueDate }}</td>
+        <td>{{ t.isCompleted }}</td>
+        <td> <a routerLink = "/update-task" [state] ="{id: t.id, name: t.name, instructions: t.instructions, dueDate: t.dueDate, completed: t.isCompleted}" > Update</a> </td>
+        <!-- <td><button (click) = "DeleteATask(t.id)">Delete</button></td> -->
+      </tr>
+    </tbody>
+  </table>
+
+  <a routerLink="home" class="nav-link" >Quit</a>
+

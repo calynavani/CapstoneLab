@@ -1,0 +1,33 @@
+
+<table class='table table-striped' aria-labelledby="tableLabel">
+    <thead>
+      <tr>
+        <th>Task #</th>
+        <th>Name</th>
+        <th>Instructions</th>
+        <th>Due Date</th>
+        <th>Completed</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of task">
+        <td>{{ t.id }}</td>
+        <td>{{ t.name }}</td>
+        <td>{{ t.instructions}}</td>
+        <td>{{ t.dueDate }}</td>
+        <td>{{ t.isCompleted }}</td>
+       <!-- <button (click)="DeleteATask()">Delete {{t.name}} </button> -->
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Which Task would you like to delete?</h3>
+<form>
+    <input type="number" id="{{Id}}" value="{{Id}}" placeholder="Enter Task #"/>
+    <button (click)="DeleteATask()">Delete {{Id}} </button>
+</form>
+
+<a routerLink="home" class="nav-link" >Quit</a>
+
