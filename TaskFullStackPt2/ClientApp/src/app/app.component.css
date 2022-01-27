@@ -1,0 +1,7 @@
+#MainBody{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border: 50px groove black;
+    border-radius: 35px;
+}
