@@ -35,7 +35,7 @@ url: string ="Task";
       return this.http.put(this.url + "/update/" + id, newTask);
     }
 
-    SearchForTask(name:string)
+    SearchForTaskByName(name:string)
     {
       return this.http.get(this.url + "/Search/" + name);
     }

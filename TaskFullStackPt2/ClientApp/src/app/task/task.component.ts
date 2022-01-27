@@ -23,11 +23,11 @@ currentTask?: Task;
         }
       );
     }
-    SearchForTask()
+    SearchForTaskByName()
     {
       let Name:string = (<HTMLInputElement>document.getElementById("name")).value;
   
-      this.taskDAL.SearchForTask(Name).subscribe(
+      this.taskDAL.SearchForTaskByName(Name).subscribe(
         (response: any) => {
           let json = Convert.taskToJson(response);
           this.currentTask=Convert.toTask(json);
