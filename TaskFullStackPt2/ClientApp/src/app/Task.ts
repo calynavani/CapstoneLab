@@ -2,7 +2,7 @@ export interface Task{
     id: number;
     name: string;
     instructions: string;
-    dueDate: Date;
+    dueDate: string;
     isCompleted: boolean;
 }
 

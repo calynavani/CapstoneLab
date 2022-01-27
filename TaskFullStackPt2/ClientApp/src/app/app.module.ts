@@ -14,7 +14,7 @@ import{TaskCRUDComponent} from './task-crud/task-crud.component';
 import{UpdateTaskComponent} from './update-task/update-task.component';
 import {DeleteTaskComponent} from './delete-task/delete-task.component';
 import{CreateTaskComponent} from './create-task/create-task.component';
-import { SearchTaskComponent } from './search-task/search-task.component';
+import {SearchTaskComponent } from './search-task/search-task.component';
 
 
 

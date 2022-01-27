@@ -11,10 +11,10 @@ namespace TaskFullStackPt2.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Instructions { get; set; }
-        public DateTime DueDate { get; set; }
+        public string DueDate { get; set; }
         public bool IsCompleted { get; set; }
 
-        public Task(int id, string name, string instructions, DateTime dueDate, bool isCompleted)
+        public Task(int id, string name, string instructions, string dueDate, bool isCompleted)
         {
             Id = id;
             Name = name;

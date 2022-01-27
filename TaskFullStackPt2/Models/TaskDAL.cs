@@ -40,7 +40,8 @@ namespace TaskFullStackPt2.Models
 
         public void InsertTask(Task t)
         {
-            string sql = $"insert into tasks values({0}, '{t.Name}', '{t.Instructions}', {t.DueDate}, {t.IsCompleted})";
+            string sql = $"insert into tasks values({0}, '{t.Name}', '{t.Instructions}','{t.DueDate}',{0})";
+            //string sql = $"insert into tasks values({0}, '{t.Name}', '{t.Instructions}','{t.DueDate.Year}-{t.DueDate.Month}-{t.DueDate.Day}',{0})";
             using (var connect = new MySqlConnection(Secret.Connection))
             {
                 connect.Open();
@@ -63,7 +64,8 @@ namespace TaskFullStackPt2.Models
 
         public void UpdateTask(int id, Task newValues)
         {
-            string sql = $"update tasks set `name`='{newValues.Name}', instructions='{newValues.Instructions}', dueDate={newValues.DueDate}, isCompleted={newValues.IsCompleted} where id={id}";
+            //string sql = $"update tasks set `name`='{newValues.Name}', instructions='{newValues.Instructions}', dueDate='{newValues.DueDate.Year}-{newValues.DueDate.Month}-{newValues.DueDate.Day}', isCompleted={newValues.IsCompleted} where id={id}";
+            string sql = $"update tasks set isCompleted={newValues.IsCompleted} where id={id}";
             using (var connect = new MySqlConnection(Secret.Connection))
             {
                 connect.Open();

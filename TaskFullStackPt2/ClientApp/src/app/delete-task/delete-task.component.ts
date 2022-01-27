@@ -26,17 +26,6 @@ export class DeleteTaskComponent implements OnInit {
   }
 
   DeleteATask(id:number){
-    let name: string = (<HTMLInputElement> document.getElementById("name")).value;
-    console.log(name);
-    let instructions: string =(<HTMLInputElement> document.getElementById("instructions")).value;
-    console.log(instructions);
-    let dueDate: Date = (<HTMLInputElement> document.getElementById("dueDate")).value;
-    console.log(dueDate);
-    let isCompleted: any = (<HTMLInputElement> document.getElementById("completed")).value;
-    console.log(isCompleted);
-
-    let removedTask: Task = {id: 0, name:name, instructions:instructions, dueDate:dueDate, isCompleted:false};
-    //We will pass this model to the task service. 
     this.taskDAL.DeleteATask(id).subscribe(
       (response: any) => {location.reload() }
     );

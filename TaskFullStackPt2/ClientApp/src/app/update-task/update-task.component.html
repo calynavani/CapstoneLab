@@ -1,3 +1,4 @@
+<h3>Which Task Is Now Complete?</h3>
 <table class='table table-striped' aria-labelledby="tableLabel">
     <thead>
       <tr>
@@ -16,16 +17,21 @@
         <td>{{ t.name }}</td>
         <td>{{ t.instructions}}</td>
         <td>{{ t.dueDate }}</td>
-        <td>{{ t.isCompleted }}</td>
+        <!--<td><select value="{{t.isCompleted}}">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select></td> -->
+        <td><button (click)="UpdateTask(t.id)">Mark As Complete </button></td>
        <!-- <button (click)="DeleteATask()">Delete {{t.name}} </button> -->
       </tr>
     </tbody>
   </table>
 
-  <h3>Which Task Is Now Complete?</h3>
-<form>
-    <input type="number" id="{{Id}}" value="{{Id}}" placeholder="Enter Task #"/>
-    <button (click)="UpdateTask(Id)">Submit</button>
-</form>
+  
+
+    <!--<input type="number" id="{{Id}}" value="{{Id}}" placeholder="Enter Task #"/>
+    <button (click)="UpdateTask(Id)">Submit</button> -->
+
 
 <a routerLink="home" class="nav-link" >Quit</a>
+<router-outlet></router-outlet>

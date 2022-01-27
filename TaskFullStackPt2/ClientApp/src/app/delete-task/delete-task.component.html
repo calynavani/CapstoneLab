@@ -11,6 +11,9 @@
         <th></th>
       </tr>
     </thead>
+          <!-- <h3>Which Task would you like to delete?</h3>
+          <input type="number" id="{{Id}}" value="{{Id}}" placeholder="Enter Task #"/> -->
+          
     <tbody>
       <tr *ngFor="let t of task">
         <td>{{ t.id }}</td>
@@ -18,16 +21,17 @@
         <td>{{ t.instructions}}</td>
         <td>{{ t.dueDate }}</td>
         <td>{{ t.isCompleted }}</td>
+        <td><button (click)="DeleteATask(t.id)">Delete </button></td>
+
        <!-- <button (click)="DeleteATask()">Delete {{t.name}} </button> -->
       </tr>
     </tbody>
   </table>
 
-  <h3>Which Task would you like to delete?</h3>
-<form>
-    <input type="number" id="{{Id}}" value="{{Id}}" placeholder="Enter Task #"/>
-    <button (click)="DeleteATask()">Delete {{Id}} </button>
-</form>
+  
+
 
 <a routerLink="home" class="nav-link" >Quit</a>
+
+<router-outlet></router-outlet>
 

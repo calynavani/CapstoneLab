@@ -5,12 +5,13 @@
     <input type="text" id="instructions" name="instructions"><br/>
     <label for="dueDate"> Due Date: </label><br/>
     <input type="date" id="dueDate" name="dueDate" value="Date"><br/>
-    <!--label for="isCompleted"> Completed: </label><br/>
-    <input type="radio" id="completed" name="completed" value="true">Yes<br/>
-    <input type="radio" id="completed" name="completed" value="false">No<br/>  -->
+    <label for="isCompleted"> Completed: </label><br/>
+    <input type="checkbox" id="completed" name="completed" value="false">Yes<br/>
+    
     
     <button (click)="CreateATask()">Add Task</button>
 
 </form>
 
 <a routerLink="home" class="nav-link" >Quit</a>
+<router-outlet></router-outlet>

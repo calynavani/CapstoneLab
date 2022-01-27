@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TaskService } from '../task.service';
 import {Task} from '../Task';
-import { threadId } from 'worker_threads';
+
 
 
 @Component({
@@ -22,7 +22,7 @@ export class CreateTaskComponent implements OnInit {
     console.log(name);
     let instructions: string =(<HTMLInputElement> document.getElementById("instructions")).value;
     console.log(instructions);
-    let dueDate: Date = (<HTMLInputElement> document.getElementById("dueDate")).value;
+    let dueDate: string = (<HTMLInputElement> document.getElementById("dueDate")).value;
     console.log(dueDate);
     let isCompleted: any = (<HTMLInputElement> document.getElementById("completed")).value;
     console.log(isCompleted);
